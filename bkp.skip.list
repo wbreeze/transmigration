@@ -4,3 +4,4 @@ Slack/Cache/
 tmp/
 com.docker.docker/Data/
 .Trash/
+.DS_Store
