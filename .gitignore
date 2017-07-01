@@ -1,2 +1,5 @@
 # GPG
 secring.*
+
+# Jekyll
+_site/
