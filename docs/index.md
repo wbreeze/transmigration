@@ -8,13 +8,11 @@ without assistance from people on the other side.
 
 The motivation for this comes from
 [this article](https://ssd.eff.org/en/module/things-consider-when-crossing-us-border)
-from the Electronic Frontier Foundation (EFF)
-about crossing borders.
+from the Electronic Frontier Foundation (EFF) about crossing borders.
 
-Q: What's better than refusing to turn-over your passwords, contacts,
-and personal data?
-
-A: Not having them available to begin with
+* Q: What's better than refusing to turn-over your passwords, contacts,
+  and personal data?
+* A: Not having them available to begin with.
 
 I am currently using three devices built by Apple with Apple operating systems.
 This focuses on transmigrating those devices.
@@ -27,14 +25,14 @@ This focuses on transmigrating those devices.
 1. Have an encrypted backup drive-- an external storage file system
     * Have the recovery key in the KeePass database.
 1. Use iTunes to copy the latest KeePass database(s) to iPhone and iPad.
-    I use
+    * I use
 [MiniKeePass](https://itunes.apple.com/us/app/minikeepass-secure-password-manager/id451661808)
     for iPhone and iPad.
     That app will accept your `.kdbx` files.
 1. Use iTunes to back-up iPhone and iPad to MacBook
    [How to from Apple](https://support.apple.com/en-us/HT203977)
 1. [Make rsync backups](rsync#backup) of MacBook to the encrypted backup drive
-1. Tar/compress/encrypt the backups as archives
+1. [Tar/compress/encrypt](cryptar) the backups as archives
 1. Store the encryption password in KeePass
 1. **Verify** the decrypted content list of the archives so you know
     that you can decrypt them.
