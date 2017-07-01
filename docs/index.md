@@ -1,22 +1,39 @@
+---
+---
 These are utilities and instructions for putting a machine to death and
 reincarnating it in another place.
 The instructions provide for you to be completely unable to resurrect
 or produce **anything**
 without assistance from people on the other side.
 
+The motivation for this comes from
+[this article](https://ssd.eff.org/en/module/things-consider-when-crossing-us-border)
+from the Electronic Frontier Foundation (EFF)
+about crossing borders.
+
+Q: What's better than refusing to turn-over your passwords, contacts,
+and personal data?
+
+A: Not having them available to begin with
+
 I am currently using three devices built by Apple with Apple operating systems.
 This focuses on transmigrating those devices.
 
 ## Before crossing
-1. If not already using full disk encryption on MacBook, do so.
-1. If not already using a password safe, such as KeePassX, do so.
+1. If not already using full disk encryption
+    ([FileVault](https://support.apple.com/en-us/HT204837)) on MacBook, do so.
+1. If not already using a password safe, such as
+    [KeePassX](https://www.keepassx.org/), do so.
 1. Have an encrypted backup drive-- an external storage file system
     * Have the recovery key in the KeePass database.
-1. Copy latest KeePass database(s) to iPhone and iPad
-    * It doesn't matter that you know the password because you will lose
-      access to this file.
-1. Back-up iPhone and iPad to MacBook using iTunes
-1. Make rsync backups of MacBook to the encrypted backup drive
+1. Use iTunes to copy the latest KeePass database(s) to iPhone and iPad.
+    I use
+[MiniKeePass](https://itunes.apple.com/us/app/minikeepass-secure-password-manager/id451661808)
+    for iPhone and iPad.
+    That app will accept your `.kdbx` files.
+1. Use iTunes to back-up iPhone and iPad to MacBook
+   [How to from Apple](https://support.apple.com/en-us/HT203977)
+1. [Make rsync backups](rsync#backup) of MacBook to the encrypted backup drive
 1. Tar/compress/encrypt the backups as archives
 1. Store the encryption password in KeePass
 1. **Verify** the decrypted content list of the archives so you know
@@ -71,6 +88,9 @@ This focuses on transmigrating those devices.
 1. Let everyone else know you're across
 1. Initialize MacBook with iCloud account and passkey
 1. Change the iCloud password to something other than the passkey
+1. I use `umask 0002` at the top of my `.bash_profile` to enable write
+    access to groups, by default, on new files.  This allows me to share
+    my HomeBrew installations across multiple users on the same machine.
 1. Install brew, git
 1. Clone this repository to get the scripts
 1. Install keepassx, amazon
