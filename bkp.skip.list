@@ -1,0 +1,6 @@
+iTunes Media/Movies/
+Library/Caches/
+Slack/Cache/
+tmp/
+com.docker.docker/Data/
+.Trash/
