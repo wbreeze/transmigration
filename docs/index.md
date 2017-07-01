@@ -1,6 +1,3 @@
-# Transmigration
-## The soul of a machine
-
 These are utilities and instructions for putting a machine to death and
 reincarnating it in another place.
 The instructions provide for you to be completely unable to resurrect
@@ -12,7 +9,7 @@ This focuses on transmigrating those devices.
 
 ## Before crossing
 1. If not already using full disk encryption on MacBook, do so.
-1, If not already using a password safe, such as KeePassX, do so.
+1. If not already using a password safe, such as KeePassX, do so.
 1. Have an encrypted backup drive-- an external storage file system
     * Have the recovery key in the KeePass database.
 1. Copy latest KeePass database(s) to iPhone and iPad
