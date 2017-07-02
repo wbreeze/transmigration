@@ -17,13 +17,25 @@ from the Electronic Frontier Foundation (EFF) about crossing borders.
 I am currently using three devices built by Apple with Apple operating systems.
 This focuses on transmigrating those devices.
 
-## Before crossing
+## Setup before and after
 1. If not already using full disk encryption
     ([FileVault](https://support.apple.com/en-us/HT204837)) on MacBook, do so.
 1. If not already using a password safe, such as
     [KeePassX](https://www.keepassx.org/), do so.
 1. Have an encrypted backup drive-- an external storage file system
     * Have the recovery key in the KeePass database.
+1. If you are using security token based Multi-Factor or
+    Two-Factor Authentication (2FA/MFA), with an app on your phone
+    such as
+    [Authy](https://itunes.apple.com/us/app/authy/id494168017),
+    ensure that you have the security
+    tokens stored in your KeePass database.  Why?
+    * You are going to wipe clean your phone and lose the security tokens
+        currently stored in Authy.
+    * It's a good practice to follow in any case.
+1. See [How to install stuff](install).
+
+## Before crossing
 1. Use iTunes to copy the latest KeePass database(s) to iPhone and iPad.
     * I use
 [MiniKeePass](https://itunes.apple.com/us/app/minikeepass-secure-password-manager/id451661808)
@@ -31,18 +43,25 @@ This focuses on transmigrating those devices.
     That app will accept your `.kdbx` files.
 1. Use iTunes to back-up iPhone and iPad to MacBook
    [How to from Apple](https://support.apple.com/en-us/HT203977)
+   * You can also back them up to iCloud
+   * You can also back up your Mac to iCloud
 1. [Make rsync backups](rsync#backup) of MacBook to the encrypted backup drive
 1. [Tar/compress/encrypt](cryptar) the backups as archives
-1. Store the encryption password in KeePass
+1. Store the encryption passphrase in KeePass
 1. **Verify** the decrypted content list of the archives so you know
     that you can decrypt them.
-1. Make note of
+    ([Archive and Encrypt](cryptar) instructions.)
+1. In order to help your shopping, to purchase the needed capacity, make note of
     * the on-disk sizes of the backups
     * the sizes of the archive files
-1. Ship the encrypted archive files to Amazon Glacier
+1. Ensure that iCloud drive has sufficient capacity for the encrypted archive
+1. Move your encrypted archive onto iCloud drive.
+
+1. [Ship the encrypted archive files](glacier) to Amazon Glacier
 1. Store the Amazon Glacier coordinates and keys in KeePass
 1. **Verify** that the archives can be retrieved from Amazon Glacier
 1. Place a copy of the KeePass database in Apple Cloud storage- KPCloud file
+
 1. Generate a long random sequence and save it in a text file- passkey
     * Thirty-two characters should be enough
     * It's a sequence that you can't memorize without a lot of effort.
@@ -85,20 +104,25 @@ This focuses on transmigrating those devices.
 1. Contact enough people to reassemble the passkey
 1. Let everyone else know you're across
 1. Initialize MacBook with iCloud account and passkey
+    * If iCloud restores the computer, all the better
 1. Change the iCloud password to something other than the passkey
 1. I use `umask 0002` at the top of my `.bash_profile` to enable write
     access to groups, by default, on new files.  This allows me to share
     my HomeBrew installations across multiple users on the same machine.
 1. Install brew, git
 1. Clone this repository to get the scripts
-1. Install keepassx, amazon
-1. Open the KPCloud file
-    * It contains the Amazon Glacier information
-1. Request the backup archives from Amazon Glacier
+
+#1. Install keepassx, amazon
+1. Install keepassx
+#1. Open the KPCloud file
+    #* It contains the Amazon Glacier information
+#1. Request the backup archives from Amazon Glacier
+
 1. Install gpg
 1. Initialize the backup drive as an encrypted device
     * Store the recovery key in KeePass
-1. Retrieve backup archives from Amazon Glacier
+#1. Retrieve backup archives from Amazon Glacier
+1. Download the backup archives from iCloud
 1. Decompress and decrypt the backup archives to the backup drive
 1. Restore MacBook using rsync
 1. Initialize iPhone and iPad with iCloud account (new password)

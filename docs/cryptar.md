@@ -1,5 +1,6 @@
 ---
 ---
+[back to index](index)
 # Archive and Encrypt
 ## Make and use encrypted archive files
 
