@@ -91,9 +91,10 @@ This focuses on transmigrating those devices.
     * You have now lost access to everything until your friends help you
 1. Leave the backup drive behind. (It too is useless without the passkey,
     but there's absolutely no need to carry the data with you.)
-1. Take the contact numbers
+1. Take the contact numbers.
 
 ## Cross to the other side
+* Enjoy a little break from the network connected world.
 
 ## Once on the other side
 1. Contact enough people to reassemble the passkey
@@ -108,8 +109,8 @@ This focuses on transmigrating those devices.
 1. Initialize the backup drive as an [encrypted device](encrypt)
     * Store the recovery key in KeePass
 1. Download the backup archives from iCloud
-1. Decompress and decrypt the backup archives to the backup drive
-1. Restore MacBook using rsync
+1. [Decompress and decrypt](cryptar) the backup archives to the backup drive
+1. Restore MacBook [using rsync](rsync)
 1. Initialize iPhone and iPad with iCloud account (new password)
     * If iCloud restores them, all the better
 1. Connect the iPhone and iPad and restore, if necessary, using iTunes
