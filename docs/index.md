@@ -56,12 +56,6 @@ This focuses on transmigrating those devices.
     * the sizes of the archive files
 1. Ensure that iCloud drive has sufficient capacity for the encrypted archive
 1. Move your encrypted archive onto iCloud drive.
-
-1. [Ship the encrypted archive files](glacier) to Amazon Glacier
-1. Store the Amazon Glacier coordinates and keys in KeePass
-1. **Verify** that the archives can be retrieved from Amazon Glacier
-1. Place a copy of the KeePass database in Apple Cloud storage- KPCloud file
-
 1. Generate a long random sequence and save it in a text file- passkey
     * Thirty-two characters should be enough
     * It's a sequence that you can't memorize without a lot of effort.
@@ -111,24 +105,16 @@ This focuses on transmigrating those devices.
     my HomeBrew installations across multiple users on the same machine.
 1. Install brew, git
 1. Clone this repository to get the scripts
-
-#1. Install keepassx, amazon
-1. Install keepassx
-#1. Open the KPCloud file
-    #* It contains the Amazon Glacier information
-#1. Request the backup archives from Amazon Glacier
-
-1. Install gpg
+1. Install keepassx, gpg
 1. Initialize the backup drive as an encrypted device
     * Store the recovery key in KeePass
-#1. Retrieve backup archives from Amazon Glacier
 1. Download the backup archives from iCloud
 1. Decompress and decrypt the backup archives to the backup drive
 1. Restore MacBook using rsync
 1. Initialize iPhone and iPad with iCloud account (new password)
-1. Connect the iPhone and iPad and restore using iTunes
-1. Remove files from Amazon Glacier as wanted
-    * Remove access information from KeePass as wanted
+    * If iCloud restores them, all the better
+1. Connect the iPhone and iPad and restore, if necessary, using iTunes
+1. Remove files from iCloud
 1. Update the backups of the KeePass database on the iPhone and iPad
     if desired. (It has the new backup drive recovery password.)
 1. All is well. Have a drink.

@@ -8,4 +8,3 @@ Here are pointers to help install the tools necessary to get through
 all of this.  These are MacOS specific wherever they are at all specific
 to an operating system, which is most everywhere.
 
-* [Amazon CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html).
