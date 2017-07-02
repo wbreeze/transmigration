@@ -100,9 +100,6 @@ This focuses on transmigrating those devices.
 1. Initialize MacBook with iCloud account and passkey
     * If iCloud restores the computer, all the better
 1. Change the iCloud password to something other than the passkey
-1. I use `umask 0002` at the top of my `.bash_profile` to enable write
-    access to groups, by default, on new files.  This allows me to share
-    my HomeBrew installations across multiple users on the same machine.
 1. Install brew, git
 1. Clone this repository to get the scripts
 1. Install keepassx, gpg
