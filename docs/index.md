@@ -22,7 +22,7 @@ This focuses on transmigrating those devices.
     ([FileVault](https://support.apple.com/en-us/HT204837)) on MacBook, do so.
 1. If not already using a password safe, such as
     [KeePassX](https://www.keepassx.org/), do so.
-1. Have an encrypted backup drive-- an external storage file system
+1. Have an [encrypted backup drive](encrypt)-- an external storage file system
     * Have the recovery key in the KeePass database.
 1. If you are using security token based Multi-Factor or
     Two-Factor Authentication (2FA/MFA), with an app on your phone
@@ -96,16 +96,16 @@ This focuses on transmigrating those devices.
 ## Cross to the other side
 
 ## Once on the other side
-1. Obtain a new backup drive of sufficient size
 1. Contact enough people to reassemble the passkey
 1. Let everyone else know you're across
+1. Obtain a new backup drive of sufficient size
 1. Initialize MacBook with iCloud account and passkey
     * If iCloud restores the computer, all the better
 1. Change the iCloud password to something other than the passkey
 1. Install brew, git
 1. Clone this repository to get the scripts
 1. Install keepassx, gpg
-1. Initialize the backup drive as an encrypted device
+1. Initialize the backup drive as an [encrypted device](encrypt)
     * Store the recovery key in KeePass
 1. Download the backup archives from iCloud
 1. Decompress and decrypt the backup archives to the backup drive
