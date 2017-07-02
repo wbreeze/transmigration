@@ -77,7 +77,9 @@ This focuses on transmigrating those devices.
     Generally, if a combination of the people can guess each-other, they can get
     together to reconstruct the full key.  This might be a good thing if
     you become lost.
-1. Ship the passkey via Signal Messenger to friends on the other side according to
+1. Ship the passkey via
+    [Signal Messenger](https://whispersystems.org/)
+    to friends on the other side according to
     the plan of contacts.
     * Let them know your plans
     * Let them know how and when they should expect to hear from you
@@ -85,7 +87,7 @@ This focuses on transmigrating those devices.
     change the iCloud password to the passkey and **verify access**.
     * verify access. This is key, because access with the passkey is the only
     way you'll reincarnate your machines.
-1. Hard reset all three devices, including loss of the passkey
+1. [Hard reset](reset) all three devices, including loss of the passkey
     * You have now lost access to everything until your friends help you
 1. Leave the backup drive behind. (It too is useless without the passkey,
     but there's absolutely no need to carry the data with you.)
