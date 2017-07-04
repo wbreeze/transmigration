@@ -21,7 +21,9 @@ This focuses on transmigrating those devices.
 1. If not already using full disk encryption
     ([FileVault](https://support.apple.com/en-us/HT204837)) on MacBook, do so.
 1. If not already using a password safe, such as
-    [KeePassX](https://www.keepassx.org/), do so.
+    [KeePassX](https://www.keepassx.org/) and
+[MiniKeePass](https://itunes.apple.com/us/app/minikeepass-secure-password-manager/id451661808),
+    do so now.
 1. Have an [encrypted backup drive](encrypt)-- an external storage file system
     * Have the recovery key in the KeePass database.
 1. If you are using security token based Multi-Factor or
@@ -32,15 +34,14 @@ This focuses on transmigrating those devices.
     tokens stored in your KeePass database.  Why?
     * You are going to wipe clean your phone and lose the security tokens
         currently stored in Authy.
+    * Hopefully, your iPhone backup will restore them, but what if you
+        need one of them to get to your iPhone backup?
     * It's a good practice to follow in any case.
 1. See [How to install stuff](install).
 
 ## Before crossing
 1. Use iTunes to copy the latest KeePass database(s) to iPhone and iPad.
-    * I use
-[MiniKeePass](https://itunes.apple.com/us/app/minikeepass-secure-password-manager/id451661808)
-    for iPhone and iPad.
-    That app will accept your `.kdbx` files.
+    * MiniKeePass will accept your KeepassX `.kdbx` files.
 1. Use iTunes to back-up iPhone and iPad to MacBook
    [How to from Apple](https://support.apple.com/en-us/HT203977)
    * You can also back them up to iCloud
