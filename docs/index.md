@@ -1,5 +1,6 @@
 ---
 ---
+# Crossing over
 These are utilities and instructions for putting a machine to death and
 reincarnating it in another place.
 The instructions provide for you to be completely unable to resurrect
@@ -16,6 +17,26 @@ from the Electronic Frontier Foundation (EFF) about crossing borders.
 
 I am currently using three devices built by Apple with Apple operating systems.
 This focuses on transmigrating those devices.
+
+As a bonus, regardless of travel:
+* you will have set-up and verified reliable backup and recovery
+  of data on your devices.
+* you will have practiced safely keeping and using secure passwords.
+* you will have practiced using encryption technologies to safely store
+  and share confidential data.
+
+## Time
+All of this takes time.  The backups can take hours, even a day the first
+time you run them. Plan ahead.
+You might want to test, and this also takes time:
+* Using the backup and restore procedures on some small amount of data,
+    to verify that they will work and you know how to use them.
+* Using the local backup as insurance for a trial-run of the entire
+    procedure before you travel.
+
+It's best to practice and measure the time for all of these operations well
+in advance of your trip.  Keep the backup fresh.
+Allow yourself double the time to complete everything before you depart.
 
 ## Setup before and after
 1. If not already using full disk encryption
@@ -45,22 +66,22 @@ This focuses on transmigrating those devices.
 1. Use iTunes to back-up iPhone and iPad to MacBook
    [How to from Apple](https://support.apple.com/en-us/HT203977)
    * You can also back them up to iCloud
-   * You can also back up your Mac to iCloud
+   * You can't really back up your Mac to iCloud, not the way you can
+     do with the iOS devices.  The best you can do is keep your Documents
+     and Desktop folder there, and your system settings.
+     [Some thoughts about iCloud](icloud) tells why I don't prefer
+     iCloud as my Mac backup solution.
 1. [Make rsync backups](rsync#backup) of MacBook to the encrypted backup drive
-1. [Tar/compress/encrypt](cryptar) the backups as archives
-1. Store the encryption passphrase in KeePass
-1. **Verify** the decrypted content list of the archives so you know
-    that you can decrypt them.
-    ([Archive and Encrypt](cryptar) instructions.)
-1. In order to help your shopping, to purchase the needed capacity, make note of
-    * the on-disk sizes of the backups
-    * the sizes of the archive files
-1. Ensure that iCloud drive has sufficient capacity for the encrypted archive
-1. Move your encrypted archive onto iCloud drive.
+   * We are making a backup of our entire user directory.
+1. Use one of several methods to put a backup in the cloud:
+    * [encrypted tarball](tarball)
+    * rely on [iCloud backup](icloud) of Documents and Desktop
+    * [Arq on Amazon](arq)
+1. Copy your KeePass password database to iCloud.
 1. Generate a long random sequence and save it in a text file- passkey
     * Thirty-two characters should be enough
     * It's a sequence that you can't memorize without a lot of effort.
-     You won't even try.
+      You won't even try.
 1. Create a plan of contacts on the other side.
     You will share parts of the passkey with them.
     You can split-up the key different ways so that
@@ -87,7 +108,7 @@ This focuses on transmigrating those devices.
 1. After enough of your contacts have confirmed that they have the passkey,
     change the iCloud password to the passkey and **verify access**.
     * verify access. This is key, because access with the passkey is the only
-    way you'll reincarnate your machines.
+    way you'll access your KeePass database and reincarnate your machines.
 1. [Hard reset](reset) all three devices, including loss of the passkey
     * You have now lost access to everything until your friends help you
 1. Leave the backup drive behind. (It too is useless without the passkey,
@@ -101,21 +122,23 @@ This focuses on transmigrating those devices.
 1. Contact enough people to reassemble the passkey
 1. Let everyone else know you're across
 1. Obtain a new backup drive of sufficient size
-1. Initialize MacBook with iCloud account and passkey
-    * If iCloud restores the computer, all the better
-1. Change the iCloud password to something other than the passkey
-1. Install brew, git
-1. Clone this repository to get the scripts
-1. Install keepassx, gpg
-1. Initialize the backup drive as an [encrypted device](encrypt)
-    * Store the recovery key in KeePass
-1. Download the backup archives from iCloud
-1. [Decompress and decrypt](cryptar) the backup archives to the backup drive
-1. Restore MacBook [using rsync](rsync)
+1. Find a place with good internet
 1. Initialize iPhone and iPad with iCloud account (new password)
     * If iCloud restores them, all the better
-1. Connect the iPhone and iPad and restore, if necessary, using iTunes
-1. Remove files from iCloud
+1. Initialize MacBook with iCloud account and passkey
+1. Change the iCloud password to something other than the passkey
+1. Install KeePass and copy your password database from iCloud to your computer.
+    * Do not delete the iCloud copy just yet.
+      Restoring your backup could overwrite
+      this newer one that you just pulled down from the cloud.
+1. Use one of the three methods to recover your backup:
+    * [encrypted tarball](tarball)
+    * rely on iCloud backup of Documents and Desktop
+    * Arq on Amazon
+1. Connect the iPhone and iPad and restore (if necessary) using iTunes
+1. Ensure the freshest copy of your KeePass password database is on your
+   machine.
 1. Update the backups of the KeePass database on the iPhone and iPad
     if desired. (It has the new backup drive recovery password.)
+    * It's now safe to delete the copy stored on iCloud.
 1. All is well. Have a drink.

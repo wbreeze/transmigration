@@ -34,12 +34,14 @@ retrieve them.  This keeps the cost down.
 1. Find the Glacier product and
    [set-up a vault](http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-vaults.html).
 
-### On your side
-
-* Install the Amazon Command Line Interface
-[Amazon CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html).
-* Amazon Glacier has extensive instructions in in its
+Amazon Glacier has extensive instructions in in its
 [getting started guide](http://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html).
+
+### On your side
+Install something for working with glacier.  Your choice:
+* [Amazon CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html).
+* [Freeze](https://itunes.apple.com/us/app/freeze-for-amazon-glacier/id1046095491?mt=12)
+* [Arq](https://www.arqbackup.com/)
 
 Here are some items you will need to know:
 * AWS Account ID
@@ -47,45 +49,4 @@ Here are some items you will need to know:
 * AWS Secret Access Key: <you created this earlier>
 * Region name: <you configured this for the vault>
 * Output format [None]: json
-
-Use the `aws configure` command to set defaults for your AWS commands.
-
-## Writing a file to the vault
-1. If you have not already,
-    [set up a vault](http://docs.aws.amazon.com/amazonglacier/latest/dev/getting-started-create-vault.html)
-1. You can verify that you have a vault and working connection to AWS Glacier
-    by issuing the command,
-```
-aws glacier list-vaults --account-id <id>
-```
-   (substitude your acount id <id>). Will give a list of your vaults.
-1. Get a sha-256 checksum of the archive file:
-```
-> openssl sha -sha256 bkp_test_dir.tar.gz
-SHA256(bkp_test_dir.tar.gz)= 9aa53bda171e4d5d3b5347ff6b24ff6b5434fe06bbe0048f45c4063dbc2188d0
-```
-   * The command is `openssl sha -sha256 <archive_filename>`
-   * The sha256 checksum is that long string of digits,
-     `9aa53bda171e4d5d3b5347ff6b24ff6b5434fe06bbe0048f45c4063dbc2188d0`
-
-1. Now use AWS CLI to push the file:
-```
-aws glacier upload-archive --account-id - \
-  --checksum 9aa53bda171e4d5d3b5347ff6b24ff6b5434fe06bbe0048f45c4063dbc2188d0 \
-  --archive-description bkp_test_dir.tar.gz \
-  --vault-name backup --body /Volumes/lAvionBackup/bkp_test_dir.tar.gz
-```
-    Depending on your uplink speed, this can take a while.
-    Remember, it is called "Glacier."
-    You won't get any output/feedback until it is finished.
-    Then it will print some JSON.  Something like this,
-```
-{
-  "archiveId": "kKB7ymWJVpPSwhGP6ycSOAekp9ZYe_--zM_mw6k76ZFGEIWQX-ybtRDvc2VkPSDtfKmQrj0IRQLSGsNuDp-AJVlu2ccmDSyDUmZwKbwbpAdGATGDiB3hHO0bjbGehXTcApVud_wyDw",
-  "checksum": "9aa53bda171e4d5d3b5347ff6b24ff6b5434fe06bbe0048f45c4063dbc2188d0",
-  "location": "/0123456789012/vaults/my-vault/archives/kKB7ymWJVpPSwhGP6ycSOAekp9ZYe_--zM_mw6k76ZFGEIWQX-ybtRDvc2VkPSDtfKmQrj0IRQLSGsNuDp-AJVlu2ccmDSyDUmZwKbwbpAdGATGDiB3hHO0bjbGehXTcApVud_wyDw"
-}
-```
-
-1. Save that JSON output in a KeePass entry.  You will need the information
-    to retrieve the data.
+* How to [set up a vault](http://docs.aws.amazon.com/amazonglacier/latest/dev/getting-started-create-vault.html)
