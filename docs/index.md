@@ -1,15 +1,16 @@
 ---
 ---
 # Crossing over
-These are utilities and instructions for putting a machine to death and
+These are utilities and instructions for putting a computing device to death and
 reincarnating it in another place.
-The instructions provide for you to be completely unable to resurrect
-or produce **anything**
-without assistance from people on the other side.
+
+When crossing a national border, these instructions provide for you to
+bring your devices, but to be completely unable to resurrect or produce
+**any data** without assistance from people on the other side.
 
 The motivation for this comes from
 [this article](https://ssd.eff.org/en/module/things-consider-when-crossing-us-border)
-from the Electronic Frontier Foundation (EFF) about crossing borders.
+from the Electronic Frontier Foundation (EFF) about entering the United States.
 
 * Q: What's better than refusing to turn-over your passwords, contacts,
   and personal data?
@@ -18,7 +19,7 @@ from the Electronic Frontier Foundation (EFF) about crossing borders.
 I am currently using three devices built by Apple with Apple operating systems.
 This focuses on transmigrating those devices.
 
-As a bonus, regardless of travel:
+As a bonus, regardless of whether you are crossing a national border:
 * you will have set-up and verified reliable backup and recovery
   of data on your devices.
 * you will have practiced safely keeping and using secure passwords.
@@ -58,7 +59,9 @@ Allow yourself double the time to complete everything before you depart.
     * Hopefully, your iPhone backup will restore them, but what if you
         need one of them to get to your iPhone backup?
     * It's a good practice to follow in any case.
-1. See [How to install stuff](install).
+1. [How to install stuff](install) contains references for installing
+   some of the software you might need, depending on the methods you
+   select for backup, storage, and recovery.
 
 ## Before crossing
 1. Use iTunes to copy the latest KeePass database(s) to iPhone and iPad.
@@ -75,7 +78,7 @@ Allow yourself double the time to complete everything before you depart.
    * We are making a backup of our entire user directory.
 1. Use one of several methods to put a backup in the cloud:
     * [encrypted tarball](tarball)
-    * rely on [iCloud backup](icloud) of Documents and Desktop
+    * [iCloud backup](icloud) of Documents and Desktop
     * [Arq on Amazon](arq)
 1. Copy your KeePass password database to iCloud.
 1. Generate a long random sequence and save it in a text file- passkey
@@ -85,7 +88,7 @@ Allow yourself double the time to complete everything before you depart.
 1. Create a plan of contacts on the other side.
     You will share parts of the passkey with them.
     You can split-up the key different ways so that
-    no-one has the full key:
+    no-one has the full key (See [splitting passwords](splits)):
     * 1st half
     * 2nd half
     * Odd characters
@@ -94,21 +97,22 @@ Allow yourself double the time to complete everything before you depart.
     It's a good idea to have multiple combinations of people from
     whom you can reconstruct the passkey.
     * Note contact phone numbers using pen and paper
-    * Note who gets which parts
+    * Note who has which parts
 
     Generally, if a combination of the people can guess each-other, they can get
     together to reconstruct the full key.  This might be a good thing if
     you become lost.
 1. Ship the passkey via
     [Signal Messenger](https://whispersystems.org/)
-    to friends on the other side according to
-    the plan of contacts.
+    to friends on the other side according to the plan of contacts.
     * Let them know your plans
     * Let them know how and when they should expect to hear from you
 1. After enough of your contacts have confirmed that they have the passkey,
     change the iCloud password to the passkey and **verify access**.
     * verify access. This is key, because access with the passkey is the only
     way you'll access your KeePass database and reincarnate your machines.
+    * You verify access to iCloud by simply logging out and logging back
+    in again, making sure you can see the file(s) stored there.
 1. [Hard reset](reset) all three devices, including loss of the passkey
     * You have now lost access to everything until your friends help you
 1. Leave the backup drive behind. (It too is useless without the passkey,
@@ -133,8 +137,8 @@ Allow yourself double the time to complete everything before you depart.
       this newer one that you just pulled down from the cloud.
 1. Use one of the three methods to recover your backup:
     * [encrypted tarball](tarball)
-    * rely on iCloud backup of Documents and Desktop
-    * Arq on Amazon
+    * [iCloud backup](icloud) of Documents and Desktop
+    * [Arq on Amazon](arq)
 1. Connect the iPhone and iPad and restore (if necessary) using iTunes
 1. Ensure the freshest copy of your KeePass password database is on your
    machine.
