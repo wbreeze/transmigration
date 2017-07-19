@@ -88,11 +88,7 @@ Allow yourself double the time to complete everything before you depart.
 1. Create a plan of contacts on the other side.
     You will share parts of the passkey with them.
     You can split-up the key different ways so that
-    no-one has the full key (See [splitting passwords](splits)):
-    * 1st half
-    * 2nd half
-    * Odd characters
-    * Even characters
+    no-one has the full key (See [splitting passwords](splits))
 
     It's a good idea to have multiple combinations of people from
     whom you can reconstruct the passkey.
@@ -125,12 +121,13 @@ Allow yourself double the time to complete everything before you depart.
 ## Once on the other side
 1. Contact enough people to reassemble the passkey
 1. Let everyone else know you're across
-1. Obtain a new backup drive of sufficient size
+1. Optionally, obtain a new backup drive of sufficient size.
+   If you're using cloud backup, like Arq, this isn't really necessary.
 1. Find a place with good internet
-1. Initialize iPhone and iPad with iCloud account (new password)
-    * If iCloud restores them, all the better
 1. Initialize MacBook with iCloud account and passkey
-1. Change the iCloud password to something other than the passkey
+1. If you want to initialize your iPhone and/or iPad now with the passkey,
+   you can do that.  If you do, you'll have to enter the new iCloud account
+   password after you change it.
 1. Install KeePass and copy your password database from iCloud to your computer.
     * Do not delete the iCloud copy just yet.
       Restoring your backup could overwrite
@@ -139,10 +136,16 @@ Allow yourself double the time to complete everything before you depart.
     * [encrypted tarball](tarball)
     * [iCloud backup](icloud) of Documents and Desktop
     * [Arq on Amazon](arq)
-1. Connect the iPhone and iPad and restore (if necessary) using iTunes
 1. Ensure the freshest copy of your KeePass password database is on your
-   machine.
+   machine.  If you copied the database to iCloud right after making the
+   backup, then they are the same.
+1. Change the iCloud password to something other than the passkey and
+   (of course) record it in your KeePass database.
+1. Initialize the iPhone and iPad with iCloud account and new password
+    * If iCloud restores them, well that was easy!
+1. Connect the iPhone and iPad
+    * Restore them using the iTunes backup if iCloud did not restore them.
 1. Update the backups of the KeePass database on the iPhone and iPad
-    if desired. (It has the new backup drive recovery password.)
-    * It's now safe to delete the copy stored on iCloud.
+    (It has the new backup drive recovery and iCloud passwords.)
+    * It's now safe to delete the password database copy stored on iCloud.
 1. All is well. Have a drink.
