@@ -8,7 +8,7 @@ When crossing a national border, these instructions provide for you to
 bring your devices, but to be completely unable to resurrect or produce
 **any data** without assistance from people on the other side.
 
-The motivation for this comes from
+The motivation comes from
 [this article](https://ssd.eff.org/en/module/things-consider-when-crossing-us-border)
 from the Electronic Frontier Foundation (EFF) about entering the United States.
 
@@ -29,7 +29,7 @@ As a bonus, regardless of whether you are crossing a national border:
 ## Time
 All of this takes time.  The backups can take hours, even a day the first
 time you run them. Plan ahead.
-You might want to test, and this also takes time:
+You might want to test (and this also takes time):
 * Using the backup and restore procedures on some small amount of data,
     to verify that they will work and you know how to use them.
 * Using the local backup as insurance for a trial-run of the entire
@@ -82,9 +82,12 @@ Allow yourself double the time to complete everything before you depart.
     * [Arq on Amazon](arq)
 1. Copy your KeePass password database to iCloud.
 1. Generate a long random sequence and save it in a text file- passkey
-    * Thirty-two characters should be enough
+    * By "long", we mean more than a couple of dozen characters.
+      Knowing the length of the passkey facilitates exhaustive search.
+      However, if the key is long enough, that hardly matters.
     * It's a sequence that you can't memorize without a lot of effort.
       You won't even try.
+    * It's a sequence that some friends will possibly read to you on the phone.
 1. Create a plan of contacts on the other side.
     You will share parts of the passkey with them.
     You can split-up the key different ways so that
@@ -100,7 +103,8 @@ Allow yourself double the time to complete everything before you depart.
     you become lost.
 1. Ship the passkey via
     [Signal Messenger](https://whispersystems.org/)
-    to friends on the other side according to the plan of contacts.
+    or other end-to-end secure channel
+    to friends on the other side, according to the plan of contacts.
     * Let them know your plans
     * Let them know how and when they should expect to hear from you
 1. After enough of your contacts have confirmed that they have the passkey,
