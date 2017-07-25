@@ -25,6 +25,16 @@ As a bonus, regardless of whether you are crossing a national border:
 * you will have practiced safely keeping and using secure passwords.
 * you will have practiced using encryption technologies to safely store
   and share confidential data.
+* whenever you use it, you get a "clean" machine.
+
+## Caution
+Be very careful about your keys and key database.  If you lose, or lose
+access to these, you will lose all of your data.
+
+I'm not available to help you.  Use this guidance at your own risk.
+If you don't understand it, maybe don't use it.  See the
+[github project readme](https://github.com/wbreeze/transmigration)
+for guidance about making improvements.
 
 ## Time
 All of this takes time.  The backups can take hours, even a day the first
@@ -44,10 +54,11 @@ Reduce as much as possible the amount of data on your computer.
 The more data you have to back up and restore, the longer it will take.
 It can take twenty-four hours to backup, and as much time to restore,
 thirty gigabytes of data.
-* Things you are not currently, actively working with.
-* Anything that is installed from the internet doesn't need to be backed up.
+* Things you are not currently, actively working with-- consider setting them
+  aside.
+* Anything that you can install from the internet doesn't need to be backed up.
 * Anything that you can recover from, for example, a git repository or
-  other shared work repository doesn't need to be 
+  other shared work repository doesn't need to be backed up.
 * Movies and music - set them aside if you can't simply download them again.
 
 Most things like those will come back to your computer just as quickly from
@@ -117,7 +128,8 @@ Try not to be greedy.  Pack a (virtual) small suitcase.
       your cell phone keypad.
     * It will be a temporary Apple ID password, so it must have
       a digit and a capital letter.
-      But don't use it yet.  Don't change your Apple ID password just yet.
+      But don't use it yet!
+    * Don't change your Apple ID password yet.
 1. Use iTunes to copy the latest KeePass database(s) to iPhone and iPad.
     * MiniKeePass will accept your KeepassX `.kdbx` files.
 1. Use iTunes to back-up iPhone and iPad to MacBook.
@@ -128,9 +140,12 @@ Try not to be greedy.  Pack a (virtual) small suitcase.
      and Desktop folder there, and your system settings.
      [Some thoughts about iCloud](icloud) tells why I don't prefer
      iCloud as my Mac backup solution.
-1. [Make rsync backups](rsync#backup) of MacBook to the encrypted backup drive
+1. Optionally [make rsync backups](rsync#backup)
+   of MacBook to an encrypted backup drive
    * We are making a backup of our entire user directory.
    * We are making a backup of the KeePass database.
+   * If using a good cloud backup, like Arq, this might not be necessary;
+     however ensure that you have separate backups of your key database.
 1. Use one of several methods to put a backup in the cloud:
     * [encrypted tarball](tarball)
     * [iCloud backup](icloud) of Documents and Desktop
@@ -202,7 +217,7 @@ Try not to be greedy.  Pack a (virtual) small suitcase.
      backups of your "blank" phone.
    * iOS devices must be reset if you want them restored from iCloud.
 1. Install KeePass and copy your password database from iCloud to your computer.
-    * Do not delete the iCloud copy just yet.
+    * Do not delete the iCloud copy yet.
       Restoring your backup could overwrite
       this newer one that you just pulled down from the cloud.
 1. Use one of the three methods to recover your backup:
