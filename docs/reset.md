@@ -2,12 +2,16 @@
 ---
 # Resetting devices
 
-Remember to disconnect from iCloud and turn-off find my iPhone before resetting!
+Remember to:
+1. turn-off find my iPhone (on iOS)
+2. sign-out of iCloud (macOS, iOS)
+*before* resetting.
 
 ## MacOS
 
 The [information from Apple](https://support.apple.com/en-us/HT204904)
 for Sierra says to:
+* Sign-out of iCloud
 * Startup the computer holding the Command and R keys.
 * Select Disk Utility from the macOS recovery menu.
 * Select the startup disk and click the Erase button
