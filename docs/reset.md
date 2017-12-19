@@ -2,6 +2,8 @@
 ---
 # Resetting devices
 
+Remember to disconnect from iCloud and turn-off find my iPhone before resetting!
+
 ## MacOS
 
 The [information from Apple](https://support.apple.com/en-us/HT204904)
@@ -16,11 +18,7 @@ for Sierra says to:
 ## iOS iPhone and iPad
 
 The [information from Apple](https://support.apple.com/en-us/HT201252)
-says to:
-* Make a backup using iTunes
-* Turn off find my iPhone
-* Use the iTunes restore function
-
+has a start.
 We want to erase the iPhone/iPad without using iTunes.
 The article references this further
 [information from Apple](https://support.apple.com/en-us/ht201274)
