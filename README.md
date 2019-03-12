@@ -42,3 +42,13 @@ others, who won't have to rediscover the problem.
 If you do something like this with other devices, by all means please fork
 and add your device specific version following the general outline
 of the strategy given here.  Give us a pull request and we'll add it.
+
+## Running locally
+
+1. Have Ruby and RubyGems installed
+1. Have bundler installed
+1. Use `git clone` to check-out the repository.
+1. Change to the root directory, `transmigration`
+1. `bundle install` to install the gems. This takes some time.
+1. Change to the docs directory
+1. `bundle exec jekyll serve`
