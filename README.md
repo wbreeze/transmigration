@@ -43,7 +43,7 @@ If you do something like this with other devices, by all means please fork
 and add your device specific version following the general outline
 of the strategy given here.  Give us a pull request and we'll add it.
 
-## Running locally
+## Running the web site locally for making changes and improvements
 
 1. Have Ruby and RubyGems installed
 1. Have bundler installed
