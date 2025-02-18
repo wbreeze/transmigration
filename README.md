@@ -1,4 +1,5 @@
-# Transmigration
+This is archived because it is not maintained nor actively updated.
+
 ## The soul of a machine
 These are utilities and instructions for putting a machine to death and
 reincarnating it in another place.
@@ -6,8 +7,10 @@ The instructions provide for you to be completely unable to resurrect
 or produce **anything**
 without assistance from people on the other side.
 
-See [the transmigration web site](https://wbreeze.github.io/transmigration/) for the
-set of documents about how to cross.
+<!--
+See [the transmigration web site](https://wbreeze.github.io/transmigration/)
+for the set of documents about how to cross.
+-->
 
 ## Devices supported
 I am currently using three devices built by Apple with Apple operating systems.
